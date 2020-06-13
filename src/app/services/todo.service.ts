@@ -28,4 +28,13 @@ export class TodoService {
     return this.http.post<Todo>(baseUrl + "/todo" , JSON.stringify(todo),httpOptions);
   }
 
+  
+  updateTodo(id, todo:Todo):Observable<Todo>{
+    return this.http.put<Todo>(baseUrl+"/todo/"+id,JSON.stringify(todo),httpOptions);
+  }
+
+  deleteTodo(id:string){
+    return this.http.delete<Todo>(baseUrl+"/todo/"+id,httpOptions);
+  }
+
 }

@@ -10,9 +10,22 @@ export class AppComponent {
   title = 'Angular-Frontend';
   myVariable = "app";
   myVar2 = "123";
+
+  variable2: string = "hello";
+
+  onClickSubmit(formdata)
+  {
+    console.log('email', formdata.email);
+  }
+
+  func3(e)
+  {
+    console.log(this.variable2);
+  }
+
   constructor()
   {
-    //this.myVariable = "";
+    console.log(this.myVar2);
     
   }
 
